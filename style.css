@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color:#be3144 ;
+    width: 100%;
+    height: 71px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right:15px ;
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+nav div a{
+    color: white;
+    font-size: 1.35rem;
+    margin: 0 1.4rem;
+}
+nav div:hover{
+    cursor: pointer;
+    background-color: #1e5980ba;
+}
+h1,h2,h3{
+    color: white;
+    font-family:  'Raleway', sans-serif;
+}
+h1,h3{
+    font-size: 3.8rem;
+    margin: 0;
+}
+h1{
+    padding: 5px;
+}
+h2{
+    font-size: 2.6rem;
+    border-bottom: 2px white solid;
+    max-width:635px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6.5rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 4rem;
+}
+.border{
+    font-weight: bold;
+}
+#main > section:first-of-type p {
+    font-size:2rem;
+    font-weight:220;
+    font-style: italic;
+    color: #be3144;
+    margin: 0;
+}
+#main{
+    max-width: 100%;  
+}
+#main > section:first-of-type {
+    background-color:#000000d5;
+    padding:300px 0;
+    text-align: center;
+    width: 100%;
+}
+#img-div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+@media(max-width:980px){
+    #img-div{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 20px;
+    }
+}
+#img-div a:hover{
+    cursor: pointer;
+}
+#img-div a p::before{
+    content: '< ';
+}
+#img-div a p::after{
+    content: ' />';
+}
+#img-div a p::before,#img-div a p::after{
+    color:rgb(239, 134, 91);
+    opacity:0;
+    transition:0.3s ease-in-out;
+}
+#img-div a:hover p::before,#img-div a:hover p::after{
+    opacity:1;
+}
+#img-div img{
+    display: block;
+    height: 80%;    
+    object-fit: cover;
+    width: 100%
+}
+#img-div a p {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    background-color: #303841;
+    margin: 0;
+    color: white;
+    padding: 5% 0;
+}
+#main > section:nth-child(2){
+    background-color:#45567d;
+    width: 100%;
+    text-align: center;
+}
+#main > section:nth-child(2) > button{
+    background-color: #303841;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 2px;
+    margin: 0 auto 100px;
+    line-height: 1.8rem;
+}
+#main > section:nth-child(2) > button:hover{
+    cursor: pointer;
+    background-color: #be3144;
+}
+button::after{
+    content: "    >";
+    font-size: 1.8rem;
+    vertical-align: middle; /* 设置 vertical-align 为 middle */
+}
+#main > section:nth-child(3){
+    background-color:#303841;
+}
+#tribute-info{
+    text-align: center;
+    padding: 160px;
+    color: white;
+
+}
+#tribute-info p{
+    font-style: italic;
+    margin: 0;
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+#tribute-info a{
+    display: inline-block;
+    margin: 60px 15px;
+    font-size: 1.5rem;
+    color: white;
+}
+.icon{
+    font-family: "Font Awesome 5 Brands";
+    font-size: 1.5rem;
+}
+.icon-1::after{
+    content: "\f082";
+}
+.icon-2::after{
+    content: "\f09b";
+}
+.icon-3::after{
+    content: "\f099";
+}
+.icon-4::after{
+    content: "\f082";
+}
+.icon-5::after{
+    content: "\f09b";
+}
+#tribute-info a:hover{
+    transform: translateY(8px);
+    transition: transform 0.3s ease-out;
+}
+footer{
+    background-color:#303841;
+    border-top:5px solid #be3144;
+    height: 55px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    font-size: 1.2rem;
+    align-items: center;
+}
+footer p,span{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+footer span{
+    display: block;
+}
+footer span a{
+    text-decoration: none;
+    color: white;
+}
+#img-caption{
+    margin: 0;
+}
+footer span::after{
+    content: "\f2c5";
+    font-family: "Font Awesome 5 Brands";
+}
