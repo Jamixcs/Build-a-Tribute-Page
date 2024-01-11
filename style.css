@@ -6,10 +6,31 @@
 a{
     text-decoration: none;
 }
+#img-div a p,
+#main > section:nth-child(2) > button,#main > section:nth-child(3),footer{
+    background-color:#303841;
+}
+nav div a,h1,h2,h3,#tribute-info,#img-div a p,
+#main > section:nth-child(2) > button,
+footer,#tribute-info div a{
+    color: white;
+}
+#main > section:nth-child(2),
+#img-div a p,
+#main > section:first-of-type,h2,#tribute-info{
+    text-align: center;
+}
+#main > section:first-of-type,#main > section:nth-child(2),
+#img-div a p,header{
+    width: 100%;
+}
+nav div:hover,#main > section:nth-child(2) > button:hover,#img-div a:hover{
+    cursor: pointer;
+}
 header{
     background-color:#be3144 ;
-    width: 100%;
     height: 71px;
+    /* 不知道範例是怎麼不寫高度的 */
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -17,41 +38,36 @@ header{
 nav{
     display: flex;
     justify-content: flex-end;
-    margin-right:15px ;
+    margin-right: 1rem;
+    max-width: 50%;
 }
 nav div{
     display: flex;
     align-items: center;
 }
 nav div a{
-    color: white;
     font-size: 1.35rem;
-    margin: 0 1.4rem;
+    margin: 0 1.4rem;   
 }
 nav div:hover{
-    cursor: pointer;
     background-color: #1e5980ba;
+    transition: 0.2s ease-out;
 }
 h1,h2,h3{
-    color: white;
     font-family:  'Raleway', sans-serif;
 }
 h1,h3{
     font-size: 3.8rem;
     margin: 0;
 }
-h1{
-    padding: 5px;
-}
 h2{
+    max-width:635px;
     font-size: 2.6rem;
     border-bottom: 2px white solid;
-    max-width:635px;
     margin: 0 auto;
-    text-align: center;
+    margin-bottom: 4rem;
     padding-top: 6.5rem;
     padding-bottom: 0.3rem;
-    margin-bottom: 4rem;
 }
 .border{
     font-weight: bold;
@@ -68,9 +84,7 @@ h2{
 }
 #main > section:first-of-type {
     background-color:#000000d5;
-    padding:300px 0;
-    text-align: center;
-    width: 100%;
+    padding:18.75rem 0;
 }
 #img-div{
     display: grid;
@@ -78,15 +92,6 @@ h2{
     gap: 2.2rem;
     max-width: 1280px;
     margin: 0 auto;
-}
-@media(max-width:980px){
-    #img-div{
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 20px;
-    }
-}
-#img-div a:hover{
-    cursor: pointer;
 }
 #img-div a p::before{
     content: '< ';
@@ -110,21 +115,13 @@ h2{
 }
 #img-div a p {
     font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-    background-color: #303841;
     margin: 0;
-    color: white;
     padding: 5% 0;
 }
 #main > section:nth-child(2){
     background-color:#45567d;
-    width: 100%;
-    text-align: center;
 }
 #main > section:nth-child(2) > button{
-    background-color: #303841;
-    color: white;
     padding: 0.6rem 1.2rem;
     font-size: 1.3rem;
     border: none;
@@ -133,7 +130,6 @@ h2{
     line-height: 1.8rem;
 }
 #main > section:nth-child(2) > button:hover{
-    cursor: pointer;
     background-color: #be3144;
 }
 button::after{
@@ -141,26 +137,29 @@ button::after{
     font-size: 1.8rem;
     vertical-align: middle; /* 设置 vertical-align 为 middle */
 }
-#main > section:nth-child(3){
-    background-color:#303841;
-}
 #tribute-info{
-    text-align: center;
-    padding: 160px;
-    color: white;
-
+    padding: 200px 0;
 }
+
 #tribute-info p{
     font-style: italic;
-    margin: 0;
     font-size: 1.2rem;
-    margin-top: 8px;
+    margin-top: 0.3rem;    
+    margin-bottom: 3rem;
 }
-#tribute-info a{
+#tribute-info div{
+    margin: 0 auto;
+}
+#tribute-info div a{
     display: inline-block;
-    margin: 60px 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 1.3rem 0;
     font-size: 1.5rem;
-    color: white;
+}
+#tribute-info div a:hover{
+    transform: translateY(8px);
+    transition: transform 0.3s ease-out;
 }
 .icon{
     font-family: "Font Awesome 5 Brands";
@@ -181,32 +180,19 @@ button::after{
 .icon-5::after{
     content: "\f09b";
 }
-#tribute-info a:hover{
-    transform: translateY(8px);
-    transition: transform 0.3s ease-out;
-}
 footer{
-    background-color:#303841;
     border-top:5px solid #be3144;
     height: 55px;
-    color: white;
     display: flex;
     justify-content: space-evenly;
-    padding: 30px;
-    font-size: 1.2rem;
+    padding: 2rem;
     align-items: center;
-}
-footer p,span{
-    margin: 0;
-    font-size: 1.1rem;
     font-weight: 300;
 }
-footer span{
+footer span,p{
     display: block;
-}
-footer span a{
-    text-decoration: none;
-    color: white;
+    padding: 0.5rem;
+    font-size: 1.1rem;
 }
 #img-caption{
     margin: 0;
@@ -214,4 +200,30 @@ footer span a{
 footer span::after{
     content: "\f2c5";
     font-family: "Font Awesome 5 Brands";
+}
+@media(max-width:980px){
+    *{
+        font-size: 14px;
+    }
+    #img-div{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 20px;
+    }
+}
+@media(max-width:728px){
+    *{
+        font-size: 14px;
+    }
+    #img-div{
+        grid-template-columns:none;
+        margin: 0 20px;
+    }
+    h2{
+        width: 90%;
+    }
+}
+@media(max-width:425px){
+*{
+    font-size: 6px;
+}
 }
